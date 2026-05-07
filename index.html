@@ -145,7 +145,11 @@
       position: absolute;
       right: 0; top: 0; bottom: 0;
       width: 55%;
-      background: linear-gradient(135deg, #2D1B0E 0%, #4A2E1A 30%, #6B3D26 60%, #3D2012 100%);
+      /* Photo: Unsplash License (free for commercial use, no attribution required)
+         Source: https://unsplash.com/photos/GrdJp16CPk8 */
+      background-image: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      background-position: center;
       clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%);
       overflow: hidden;
     }
@@ -407,22 +411,17 @@
     .about-img {
       position: relative;
       aspect-ratio: 4/5;
-      background: linear-gradient(135deg, #E8D5B0 0%, #C9A96E 40%, #9B7D4A 100%);
+      /* Photo: Unsplash License (free for commercial use, no attribution required)
+         Source: https://unsplash.com/photos/DFtjXYBqF0U */
+      background-image: url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80');
+      background-size: cover;
+      background-position: center top;
       border-radius: 2px;
       overflow: hidden;
     }
 
     .about-img::before {
-      content: 'BEAUTY';
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%,-50%);
-      font-family: var(--font-en);
-      font-size: 4rem;
-      font-weight: 300;
-      color: rgba(255,255,255,0.15);
-      letter-spacing: 0.3em;
-      white-space: nowrap;
+      content: '';
     }
 
     .about-img-deco {
@@ -715,10 +714,11 @@
     }
 
     .pricing-card {
-      border: 1px solid #E8E8E8;
+      border: 1px solid #caab87;
       border-radius: 2px;
       padding: 48px 36px;
       position: relative;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
@@ -728,12 +728,11 @@
     }
 
     .pricing-card.featured {
-      background: var(--dark);
-      border-color: var(--dark);
-      transform: translateY(-12px);
+      background: var(--cream);
+      border: 2px solid var(--gold);
     }
 
-    .pricing-card.featured:hover { transform: translateY(-18px); }
+    .pricing-card.featured:hover { transform: translateY(-6px); }
 
     .pricing-badge {
       position: absolute;
@@ -755,7 +754,7 @@
       margin-bottom: 6px;
     }
 
-    .pricing-card.featured .pricing-name { color: var(--white); }
+    .pricing-card.featured .pricing-name { color: var(--dark); }
 
     .pricing-name-ja {
       font-size: 0.75rem;
@@ -763,7 +762,7 @@
       margin-bottom: 32px;
     }
 
-    .pricing-card.featured .pricing-name-ja { color: rgba(255,255,255,0.45); }
+    .pricing-card.featured .pricing-name-ja { color: var(--gray); }
 
     .pricing-price {
       font-family: var(--font-en);
@@ -804,7 +803,7 @@
     }
 
     .pricing-card.featured .pricing-features li {
-      color: rgba(255,255,255,0.6);
+      color: var(--gray);
       border-color: rgba(255,255,255,0.08);
     }
 
@@ -1201,7 +1200,6 @@
       .process-steps::before { display: none; }
       .testimonials-grid { grid-template-columns: 1fr 1fr; }
       .pricing-grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; }
-      .pricing-card.featured { transform: none; }
       .pricing-card.featured:hover { transform: translateY(-6px); }
       .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
     }
@@ -1583,7 +1581,7 @@
         <div class="pricing-badge">MOST POPULAR</div>
         <div class="pricing-name" style="color:var(--white)">PREMIUM</div>
         <div class="pricing-name-ja">プレミアムプラン</div>
-        <div class="pricing-price" style="color:var(--gold)">¥28,000 <small>〜</small></div>
+        <div class="pricing-price" style="color:var(--black)">¥28,000 <small>〜</small></div>
         <div class="pricing-period" style="color:rgba(255,255,255,0.35)">1回あたり（税込）</div>
         <ul class="pricing-features">
           <li>カウンセリング（60分）</li>
